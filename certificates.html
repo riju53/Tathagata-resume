@@ -1,321 +1,311 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Certificates | Tathagata Nath</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates | Tathagata Nath</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for crisp Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-<style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          animation: {
+            'blob': 'blob 7s infinite',
+          },
+          keyframes: {
+            blob: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+              '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+              '100%': { transform: 'translate(0px, 0px) scale(1)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background:#f5f7fa;
-    color:#333;
-}
-
-header{
-    background:linear-gradient(135deg,#0f172a,#1e293b);
-    color:white;
-    text-align:center;
-    padding:60px 20px;
-}
-
-header h1{
-    font-size:3rem;
-    margin-bottom:10px;
-}
-
-header p{
-    font-size:1.1rem;
-    opacity:.9;
-}
-
-.nav-buttons{
-    margin-top:25px;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 25px;
-    margin:5px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#1d4ed8;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    padding:50px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.section-title h2{
-    font-size:2rem;
-    color:#0f172a;
-}
-
-.certificate-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:20px;
-}
-
-.card h3{
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#666;
-    margin-bottom:15px;
-}
-
-.btn-small{
-    display:inline-block;
-    padding:10px 18px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-}
-
-.btn-small:hover{
-    background:#1d4ed8;
-}
-
-.pdf-card{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    height:220px;
-    background:#f8fafc;
-}
-
-.pdf-icon{
-    font-size:80px;
-    margin-bottom:10px;
-}
-
-footer{
-    text-align:center;
-    padding:25px;
-    background:#0f172a;
-    color:white;
-    margin-top:50px;
-}
-
-@media(max-width:768px){
-
-    header h1{
-        font-size:2rem;
+  <style>
+    /* Custom Glassmorphism & Background Styling matching index.html */
+    body {
+      background-color: #090d16;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.25) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.22) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.22) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.18) 0px, transparent 50%),
+        url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
     }
 
-}
+    .glass-card {
+      background: rgba(17, 24, 39, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
 
-</style>
+    .glass-card:hover {
+      border-color: rgba(139, 92, 246, 0.5);
+      box-shadow: 0 12px 40px -10px rgba(139, 92, 246, 0.35);
+    }
+
+    .glass-nav {
+      background: rgba(9, 13, 22, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
 </head>
 
-<body>
+<body class="text-slate-200 antialiased selection:bg-fuchsia-500 selection:text-white relative min-h-screen flex flex-col justify-between">
 
-<header>
+  <!-- Dark Overlay for High Readability over Background Image -->
+  <div class="fixed inset-0 bg-slate-950/75 -z-10 pointer-events-none"></div>
 
-    <h1>My Certificates</h1>
+  <!-- ================= STICKY NAVIGATION ================= -->
+  <nav class="glass-nav sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="text-lg font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent flex items-center gap-2">
+          <i class="fa-solid fa-arrow-left text-sm text-cyan-400"></i> TN<span class="text-white">.AI</span>
+        </a>
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-1.5">
+            <i class="fa-solid fa-house text-cyan-400"></i> Portfolio
+          </a>
+          <a href="Tathagata_Resume.pdf" download class="px-4 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white shadow-lg shadow-fuchsia-500/25 transition flex items-center gap-1.5">
+            <i class="fa-solid fa-download"></i>Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-    <p>Professional Certifications, Courses, Workshops & Achievements</p>
+  <!-- ================= HEADER SECTION ================= -->
+  <header class="relative overflow-hidden pt-16 pb-16 lg:pt-20 lg:pb-20 text-center">
+    <!-- Decorative Animated Gradient Orbs -->
+    <div class="absolute top-10 left-1/4 w-72 h-72 bg-purple-600/30 rounded-full mix-blend-screen filter blur-3xl animate-blob pointer-events-none"></div>
+    <div class="absolute top-10 right-1/4 w-72 h-72 bg-cyan-500/30 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000 pointer-events-none"></div>
 
-    <div class="nav-buttons">
-        <a href="index.html" class="btn">🏠 Back to Portfolio</a>
-        <a href="resume.docx" class="btn" download>📄 Download Resume</a>
+    <div class="max-w-4xl mx-auto px-4 relative z-10">
+      <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30 inline-flex items-center gap-2 mb-4">
+        <i class="fa-solid fa-award"></i> Verified Credentials
+      </span>
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4">
+        <span class="bg-gradient-to-r from-white via-cyan-100 to-violet-200 bg-clip-text text-transparent">
+          My Certificates
+        </span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-8">
+        Professional Certifications, Courses, Workshops, Academic Marksheets & Research Achievements
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="index.html" class="px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600 hover:from-cyan-400 hover:to-violet-500 shadow-lg shadow-blue-600/30 transition flex items-center gap-2">
+          <i class="fa-solid fa-house"></i> Back to Portfolio
+        </a>
+        <a href="Tathagata_Resume.pdf" download class="px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-fuchsia-600 to-pink-600 hover:from-fuchsia-500 hover:to-pink-500 shadow-lg shadow-pink-600/30 transition flex items-center gap-2">
+          <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTAINER & CERTIFICATE GRID ================= -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 w-full flex-grow">
+    
+    <div class="flex items-center gap-3 mb-8">
+      <span class="w-2 h-8 rounded-full bg-gradient-to-b from-cyan-400 to-fuchsia-500"></span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Certificates Gallery</h2>
     </div>
 
-</header>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-<div class="container">
+      <!-- Certificate 1: Langchain -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+        <div class="relative overflow-hidden h-56 bg-slate-900">
+          <img src="langchain.jpg" onerror="this.src='https://ui-avatars.com/api/?name=LangChain+Cert&background=4f46e5&color=fff&size=400'" alt="Langchain Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/80 text-white backdrop-blur-md">Verified</div>
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Langchain Certification</h3>
+            <p class="text-sm text-slate-300 mb-6">Langchain Certification from Langchain academy.</p>
+          </div>
+          <a href="https://academy.langchain.com/certificates/goqa0wpxpp" target="_blank" class="w-full text-center py-2.5 px-4 rounded-xl text-xs font-bold bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-external-link-alt"></i> View Certificate
+          </a>
+        </div>
+      </div>
 
-    <div class="section-title">
-        <h2>Certificates Gallery</h2>
+      <!-- Certificate 2: Machine Learning -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+        <div class="relative overflow-hidden h-56 bg-slate-900">
+          <img src="machine_learning.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Machine+Learning&background=06b6d4&color=fff&size=400'" alt="Machine Learning Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-cyan-500/80 text-white backdrop-blur-md">Training</div>
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Machine Learning Certification</h3>
+            <p class="text-sm text-slate-300 mb-6">Completed Machine Learning training and practical projects using Python.</p>
+          </div>
+          <a href="machine_learning.jpg" target="_blank" class="w-full text-center py-2.5 px-4 rounded-xl text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-eye"></i> View Certificate
+          </a>
+        </div>
+      </div>
+
+      <!-- Certificate 3: M.Tech Marksheet -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+        <div class="relative overflow-hidden h-56 bg-slate-900">
+          <img src="M.tech.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=MTech+Marksheet&background=10b981&color=fff&size=400'" alt="M.Tech Marksheet" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/80 text-white backdrop-blur-md">Academic</div>
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">M.Tech Marksheet</h3>
+            <p class="text-sm text-slate-300 mb-6">Detailed M.Tech Marksheet from Aliah University (CGPA: 8.63).</p>
+          </div>
+          <a href="M.tech.jpeg" target="_blank" class="w-full text-center py-2.5 px-4 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-file-lines"></i> View Marksheet
+          </a>
+        </div>
+      </div>
+
+      <!-- Certificate 4: M.Tech Thesis / Publication -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+        <div class="relative overflow-hidden h-56 bg-slate-900">
+          <img src="Rhino.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Elsevier+SCI&background=f59e0b&color=fff&size=400'" alt="M.Tech Thesis" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-amber-500/80 text-white backdrop-blur-md">SCI Journal</div>
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">M.Tech Thesis (Publications)</h3>
+            <p class="text-sm text-slate-300 mb-6">“Application of wireless sensor networks for Rhino protection against poachers in Kaziranga National Park,” <strong class="text-amber-300">AEU-Elsevier, vol. 111, 2019. SCI Journal impact factor 3.2</strong>.</p>
+          </div>
+          <a href="Rhino.pdf" target="_blank" class="w-full text-center py-2.5 px-4 rounded-xl text-xs font-bold bg-amber-600 hover:bg-amber-500 text-white transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-file-pdf"></i> View Research Paper
+          </a>
+        </div>
+      </div>
+
+      <!-- Certificate 5: Data Science -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+        <div class="relative overflow-hidden h-56 bg-slate-900">
+          <img src="datascience.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Data+Science&background=3b82f6&color=fff&size=400'" alt="Data Science Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-blue-500/80 text-white backdrop-blur-md">Certification</div>
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Data Science Certification</h3>
+            <p class="text-sm text-slate-300 mb-6">Specialized training in Data Analysis, Data Cleaning, and Pandas/NumPy workflows.</p>
+          </div>
+          <a href="datascience.pdf" target="_blank" class="w-full text-center py-2.5 px-4 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-500 text-white transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-certificate"></i> View Certificate
+          </a>
+        </div>
+      </div>
+
+      <!-- Certificate 6: LangGraph -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+        <div class="relative overflow-hidden h-56 bg-slate-900">
+          <img src="Langgraph.jpg" onerror="this.src='https://ui-avatars.com/api/?name=LangGraph+Cert&background=8b5cf6&color=fff&size=400'" alt="LangGraph Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-violet-500/80 text-white backdrop-blur-md">Academy</div>
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">LangGraph Certification</h3>
+            <p class="text-sm text-slate-300 mb-6">LangGraph Certification from Langchain Academy for multi-agent orchestration.</p>
+          </div>
+          <a href="https://academy.langchain.com/certificates/wrfxnmvohj" target="_blank" class="w-full text-center py-2.5 px-4 rounded-xl text-xs font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-external-link-alt"></i> View Certificate
+          </a>
+        </div>
+      </div>
+
+      <!-- Certificate 7: Generative AI -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+        <div class="relative overflow-hidden h-56 bg-slate-900">
+          <img src="genai.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Generative+AI&background=ec4899&color=fff&size=400'" alt="Generative AI Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-pink-500/80 text-white backdrop-blur-md">GenAI</div>
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Generative AI & LLMs</h3>
+            <p class="text-sm text-slate-300 mb-6">LLMs, Prompt Engineering and AI Application Development training.</p>
+          </div>
+          <a href="genai.jpg" target="_blank" class="w-full text-center py-2.5 px-4 rounded-xl text-xs font-bold bg-pink-600 hover:bg-pink-500 text-white transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-eye"></i> View Certificate
+          </a>
+        </div>
+      </div>
+
+      <!-- Certificate 8: Best Startup Idea -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+        <div class="relative overflow-hidden h-56 bg-slate-900">
+          <img src="best_idea.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Best+Startup&background=f59e0b&color=fff&size=400'" alt="Best Startup Idea" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-amber-500/80 text-white backdrop-blur-md">Springer</div>
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Best Startup Idea</h3>
+            <p class="text-sm text-slate-300 mb-6">Best Startup Idea entitled <strong class="text-amber-300">"Automatic Postal Kiosk"</strong> at the International Conference on Frontiers in Computing and Systems, <i>Springer</i>.</p>
+          </div>
+          <a href="best_idea.jpg" target="_blank" class="w-full text-center py-2.5 px-4 rounded-xl text-xs font-bold bg-amber-600 hover:bg-amber-500 text-white transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-trophy"></i> View Certificate
+          </a>
+        </div>
+      </div>
+
+      <!-- Certificate 9: Scientific Journal Reviewer -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+        <div class="relative overflow-hidden h-56 bg-slate-900">
+          <img src="reviewer.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Scopus+Reviewer&background=10b981&color=fff&size=400'" alt="Scientific Journal Reviewer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/80 text-white backdrop-blur-md">Scopus</div>
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Scientific Journal Reviewer</h3>
+            <p class="text-sm text-slate-300 mb-6">Contributed as a Reviewer in the scientific journal <strong class="text-emerald-300">"International Journal of Electrical and Computing Engineering", <i>Scopus</i></strong>.</p>
+          </div>
+          <a href="reviewer.jpg" target="_blank" class="w-full text-center py-2.5 px-4 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-certificate"></i> View Certificate
+          </a>
+        </div>
+      </div>
+
     </div>
 
-    <div class="certificate-grid">
+  </main>
 
-        <!-- Certificate 1 -->
-		<div class="card">
-            <img src="langchain.jpg" alt="Langchain Certificate">
-            <div class="card-content">
-                <h3>Langchain Certification</h3>
-                <p>Langchain Certification from Langchain academy.</p>
-
-                <a href="https://academy.langchain.com/certificates/goqa0wpxpp"
-                   target="_blank"
-                   class="btn-small">
-                   View Certificate
-                </a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="machine_learning.jpg" alt="Machine Learning Certificate">
-            <div class="card-content">
-                <h3>Machine Learning Certification</h3>
-                <p>Completed Machine Learning training and practical projects using Python.</p>
-
-                <a href="machine_learning.jpg"
-                   target="_blank"
-                   class="btn-small">
-                   View Certificate
-                </a>
-            </div>
-        </div>
-
-        <!-- Certificate 2 -->
-        <div class="card">
-            <img src="M.tech.jpeg" alt="LangChain Certificate">
-            <div class="card-content">
-                <h3>M.tech Marksheet</h3>
-                <p>Detailed M.tech Marksheet.</p>
-
-                <a href="M.tech.jpeg"
-                   target="_blank"
-                   class="btn-small">
-                   View Certificate
-                </a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="Rhino.jpg" alt="M.tech thesis Certificate">
-            <div class="card-content">
-                <h3>M.tech thesis(Publications)</h3>
-                <p>“Application of wireless sensor networks for Rhino protection against poachers in Kaziranga National Park,” <b>AEU-International Journal of Electronics and Communications (Elsevier), vol. 111, 2019. SCI Journal impact factor 3.2</b>.</p>
-
-                <a href="Rhino.pdf"
-                   target="_blank"
-                   class="btn-small">
-                   View Certificate
-                </a>
-            </div>
-        </div>
-
-        <!-- Certificate 5 -->
-        <div class="card">
-            <img src="datascience.jpg" alt="Data Science Certificate">
-            <div class="card-content">
-                <h3>Data Science Certification</h3>
-                <p>Data Analysis and Data cleaning.</p>
-
-                <a href="datascience.pdf"
-                   target="_blank"
-                   class="btn-small">
-                   View Certificate
-                </a>
-            </div>
-        </div>
-		<div class="card">
-            <img src="Langgraph.jpg" alt="Langgraph Certificate">
-            <div class="card-content">
-                <h3>LangGraph Certification</h3>
-                <p>LangGraph Certification from Langchain academy.</p>
-
-                <a href="https://academy.langchain.com/certificates/wrfxnmvohj"
-                   target="_blank"
-                   class="btn-small">
-                   View Certificate
-                </a>
-            </div>
-        </div>
-
-        <!-- Certificate 6 -->
-        <div class="card">
-            <img src="genai.jpg" alt="Generative AI Certificate">
-            <div class="card-content">
-                <h3>LangGraph</h3>
-                <p>LLMs, Prompt Engineering and AI Application Development.</p>
-
-                <a href="genai.jpg"
-                   target="_blank"
-                   class="btn-small">
-                   View Certificate
-                </a>
-            </div>
-        </div>
-		<div class="card">
-            <img src="best_idea.jpg" alt="Generative AI Certificate">
-            <div class="card-content">
-                <h3>Best Startup Idea</h3>
-                <p>Best Startup Idea entitled <b>"Automatic Postal Kiosk "International Conference on Frontiers 
-      in Computing and systems", <i>Springer<i> .</b>
-</p>
-
-                <a href="best_idea.jpg"
-                   target="_blank"
-                   class="btn-small">
-                   View Certificate
-                </a>
-            </div>
-        </div>
-		<div class="card">
-            <img src="reviewer.jpg" alt="Generative AI Certificate">
-            <div class="card-content">
-                <h3>Reviewer</h3>
-                <p>Contributed as a Reviewer in a scientific journal<b> "International Journal of Electrical and 
-      Computing Engineering", <i>Scopus<i>.</b>
-</p>
-
-                <a href="reviewer.jpg"
-                   target="_blank"
-                   class="btn-small">
-                   View Certificate
-                </a>
-            </div>
-        </div>
-
-
-
+  <!-- ================= FOOTER ================= -->
+  <footer class="glass-nav py-8 text-center mt-auto">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="text-sm text-slate-400">
+        &copy; 2026 <span class="text-white font-semibold">Tathagata Nath</span> | Certificates Gallery
+      </p>
     </div>
-
-</div>
-
-<footer>
-    <p>© 2026 Tathagata Nath | Certificates</p>
-</footer>
+  </footer>
 
 </body>
 </html>
