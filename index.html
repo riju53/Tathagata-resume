@@ -1,928 +1,606 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Tathagata Nath | AI & Agentic AI Engineer</title>
-
-  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
 </head>
 
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-600 selection:text-white">
 
-<!-- ================= HERO ================= -->
-
-<header class="hero">
-
-  <div class="container hero-content">
-
-    <div class="profile-pic">
-      <img src="profile.jpg" alt="Tathagata Nath">
-    </div>
-
-    <h1>Tathagata Nath</h1>
-
-    <p class="subtitle">
-      AI / Agentic AI | Machine Learning | Deep Learning
-    </p>
-
-    <div class="contact">
-
-      <p>📧 tathagatanath01@gmail.com | tathagatallm@gmail.com </p>
-
-    <!-- <p>📧 </p> -->
-
-      <p>📞 +91-9674145258</p>
-
-      <p>📍 Kolkata, West Bengal</p>  
-
-    </div>
-
-    <div class="hero-buttons">
-
-      <a href="#projects" class="btn">
-        View My Work
+  <!-- ================= STICKY NAVBAR ================= -->
+  <nav class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 text-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+      <a href="#" class="font-bold text-lg bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+        TN.ai
       </a>
-
-      <a href="Tathagata_Resume.pdf"
-         class="btn"
-         download>
-        📄 Download Resume
+      <div class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="#summary" class="hover:text-cyan-400 transition">Summary</a>
+        <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
+        <a href="#experience" class="hover:text-cyan-400 transition">Experience & Education</a>
+        <a href="#research" class="hover:text-cyan-400 transition">Research</a>
+      </div>
+      <a href="Tathagata_Resume.pdf" download
+        class="text-xs sm:text-sm font-semibold bg-gradient-to-r from-indigo-500 to-cyan-500 hover:from-indigo-600 hover:to-cyan-600 text-white px-4 py-1.5 rounded-full shadow-md transition">
+        Download PDF
       </a>
-
-      <a href="certificates.html"
-         class="btn">
-        🏆 Certificates
-      </a>
-
     </div>
+  </nav>
 
-  </div>
+  <!-- ================= HERO ================= -->
+  <header class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white py-16 sm:py-24">
+    <!-- Decorative background blobs -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl -translate-y-1/2 pointer-events-none"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl translate-y-1/2 pointer-events-none"></div>
 
-</header>
-
-
-<!-- ================= PROFESSIONAL SUMMARY ================= -->
-
-<section class="section">
-
-  <div class="container">
-
-    <h2>Professional Summary</h2>
-
-    <p>
-      Computer Science professional with an M.Tech in Computer Science &
-      Engineering and hands-on project experience in Agentic AI, Machine
-      Learning, Deep Learning, and Data Analysis. Skilled in Python,
-      LangChain, LangGraph, NumPy, Pandas, SQL, ANN/CNN, and Machine Learning
-      Regression and Classification. Experienced in developing prediction
-      systems and AI-powered applications. Published research in Wireless
-      Sensor Networks and experienced in web design and scientific review
-      activities.
-    </p>
-
-    <p>
-      I have more than 5 years of career gap, but I am highly motivated to
-      return to the professional workforce and contribute my technical skills
-      in AI, Machine Learning, Deep Learning, and Data Science.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- ================= EDUCATION ================= -->
-
-<section class="section">
-
-  <div class="container">
-
-    <h2>Education</h2>
-
-    <div class="grid">
-
-      <div class="card">
-
-        <h3>M.Tech, Computer Science & Engineering</h3>
-
-        <p>
-          Aliah University, Kolkata, West Bengal
-        </p>
-
-        <p>
-          <strong>CGPA:</strong> 8.63 | 2019
-        </p>
-
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <!-- Profile Image with Gradient Ring -->
+      <div class="relative inline-block mb-6">
+        <div class="p-1.5 rounded-full bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-500 shadow-xl shadow-indigo-500/30">
+          <img src="profile.jpg" alt="Tathagata Nath"
+            class="w-32 h-32 sm:w-36 sm:h-36 rounded-full object-cover border-4 border-slate-900 bg-slate-800" />
+        </div>
+        <span class="absolute bottom-2 right-2 bg-emerald-500 text-white text-xs font-bold px-2.5 py-0.5 rounded-full border-2 border-slate-900 shadow">
+          Open to Work
+        </span>
       </div>
 
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-3">
+        Tathagata Nath
+      </h1>
 
-      <div class="card">
+      <p class="text-lg sm:text-xl font-medium bg-gradient-to-r from-cyan-300 via-indigo-300 to-purple-300 bg-clip-text text-transparent mb-6">
+        AI &amp; Agentic AI Engineer &bull; Machine Learning &bull; Deep Learning
+      </p>
 
-        <h3>5-Year Integrated M.Sc, Computer Science</h3>
-
-        <p>
-          Aliah University, Kolkata, West Bengal
-        </p>
-
-        <p>
-          <strong>CGPA:</strong> 7.67 | 2016
-        </p>
-
+      <!-- Contact Pills -->
+      <div class="flex flex-wrap justify-center gap-3 text-sm text-slate-300 mb-8">
+        <a href="mailto:tathagatanath01@gmail.com"
+          class="bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/10 px-4 py-1.5 rounded-full transition">
+          📧 tathagatanath01@gmail.com
+        </a>
+        <a href="mailto:tathagatallm@gmail.com"
+          class="bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/10 px-4 py-1.5 rounded-full transition">
+          📧 tathagatallm@gmail.com
+        </a>
+        <span class="bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-1.5 rounded-full">
+          📞 +91-9674145258
+        </span>
+        <span class="bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-1.5 rounded-full">
+          📍 Kolkata, West Bengal
+        </span>
       </div>
 
-
-      <div class="card">
-
-        <h3>Higher Secondary</h3>
-
-        <p>
-          Manbazar R.M.I | WBCHSE
-        </p>
-
-        <p>
-          <strong>Percentage:</strong> 60% | 2010
-        </p>
-
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#projects"
+          class="px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white shadow-lg shadow-indigo-500/30 transition transform hover:-translate-y-0.5">
+          🚀 View My Work
+        </a>
+        <a href="Tathagata_Resume.pdf" download
+          class="px-6 py-3 rounded-xl font-semibold bg-white text-slate-900 hover:bg-slate-100 shadow-lg transition transform hover:-translate-y-0.5">
+          📄 Download Resume
+        </a>
+        <a href="certificates.html"
+          class="px-6 py-3 rounded-xl font-semibold bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-sm transition transform hover:-translate-y-0.5">
+          🏆 Certificates
+        </a>
       </div>
-
-
-      <div class="card">
-
-        <h3>Secondary</h3>
-
-        <p>
-          Manbazar R.M.I | WBBSE
-        </p>
-
-        <p>
-          <strong>Percentage:</strong> 74.63% | 2007
-        </p>
-
-      </div>
-
     </div>
+  </header>
 
-  </div>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-20">
 
-</section>
+    <!-- ================= PROFESSIONAL SUMMARY ================= -->
+    <section id="summary" class="scroll-mt-20">
+      <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-cyan-500 to-indigo-600"></div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-base">💡</span>
+          Professional Summary
+        </h2>
+        <div class="space-y-4 text-slate-600 leading-relaxed">
+          <p>
+            Computer Science professional with an <strong class="text-slate-800">M.Tech in Computer Science &amp; Engineering</strong> and hands-on project experience in <strong class="text-indigo-600">Agentic AI, Machine Learning, Deep Learning, and Data Analysis</strong>. Skilled in Python, LangChain, LangGraph, FastAPI, Streamlit, NumPy, Pandas, SQL, ANN/CNN, and predictive modeling. Experienced in building end-to-end AI-powered applications, published peer-reviewed research in Wireless Sensor Networks (Elsevier), and contributed to scientific journal peer reviews.
+          </p>
+          <div class="bg-indigo-50/70 border border-indigo-100 rounded-xl p-4 text-slate-700 text-sm sm:text-base">
+            <strong class="text-indigo-900">Career Return &amp; R&amp;D Focus:</strong> Following a 5+ year career break, I have dedicated myself to intensive independent R&amp;D in modern Generative AI, multi-agent orchestration, and full-stack ML deployment—building and shipping multiple live AI applications—and am eager to bring this momentum back into a full-time engineering role.
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ================= TECHNICAL SKILLS ================= -->
+    <section id="skills" class="scroll-mt-20">
+      <div class="mb-8">
+        <h2 class="text-3xl font-extrabold text-slate-900">Technical Skills</h2>
+        <p class="text-slate-500 mt-1">Core frameworks, languages, and tools I build with</p>
+      </div>
 
-<!-- ================= TECHNICAL SKILLS ================= -->
-
-<section class="section">
-
-  <div class="container">
-
-    <h2>Technical Skills</h2>
-
-    <div class="grid">
-
-      <div class="card">
-
-        <h3>Generative / Agentic AI</h3>
-
-        <div class="skills">
-
-          <span>LangChain</span>
-          <span>LangGraph</span>
-          <span>Groq LLM</span>
-          <span>AI Agents</span>
-          <span>Custom Tools</span>
-          <span>RAG</span>
-
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Generative / Agentic AI -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-md transition">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-lg">🤖</span>
+            <h3 class="font-bold text-lg text-slate-900">Generative &amp; Agentic AI</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200">LangChain</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200">LangGraph</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200">Groq LLM</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200">Multi-Agent Systems</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200">Custom Tools</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200">RAG</span>
+          </div>
         </div>
 
-      </div>
-
-
-      <div class="card">
-
-        <h3>Programming & Data</h3>
-
-        <div class="skills">
-
-          <span>Python</span>
-          <span>NumPy</span>
-          <span>Pandas</span>
-          <span>SQL</span>
-
+        <!-- Machine & Deep Learning -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-md transition">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-lg">🧠</span>
+            <h3 class="font-bold text-lg text-slate-900">Machine &amp; Deep Learning</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">Machine Learning</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">Regression</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">Classification</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">Deep Learning</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">ANN</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">CNN</span>
+          </div>
         </div>
 
-      </div>
-
-
-      <div class="card">
-
-        <h3>Data Science</h3>
-
-        <div class="skills">
-
-          <span>Data Preprocessing</span>
-          <span>Data Analysis</span>
-          <span>Data Analytics</span>
-          <span>Data Cleaning</span>
-
+        <!-- Programming & Backend -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-md transition">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center text-lg">💻</span>
+            <h3 class="font-bold text-lg text-slate-900">Programming &amp; Deployment</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-50 text-cyan-800 border border-cyan-200">Python</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-50 text-cyan-800 border border-cyan-200">FastAPI</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-50 text-cyan-800 border border-cyan-200">Streamlit</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-50 text-cyan-800 border border-cyan-200">SQL &amp; SQLite</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-50 text-cyan-800 border border-cyan-200">NumPy</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-50 text-cyan-800 border border-cyan-200">Pandas</span>
+          </div>
         </div>
 
-      </div>
-
-
-      <div class="card">
-
-        <h3>Machine & Deep Learning</h3>
-
-        <div class="skills">
-
-          <span>Machine Learning</span>
-          <span>Regression</span>
-          <span>Classification</span>
-          <span>Deep Learning</span>
-          <span>ANN</span>
-          <span>CNN</span>
-
+        <!-- Data Science -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-md transition">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg">📊</span>
+            <h3 class="font-bold text-lg text-slate-900">Data Science</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">Data Preprocessing</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">Data Analysis</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">Data Analytics</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">Data Cleaning</span>
+          </div>
         </div>
 
+        <!-- Core CS & Other -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-md transition md:col-span-2 lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-lg">⚙️</span>
+            <h3 class="font-bold text-lg text-slate-900">Core Computer Science &amp; Tools</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200">Data Structures</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200">Database Management Systems (DBMS)</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200">MATLAB</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200">REST APIs</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200">Prompt Engineering</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="scroll-mt-20 space-y-12">
+      <div>
+        <h2 class="text-3xl font-extrabold text-slate-900">Featured Projects</h2>
+        <p class="text-slate-500 mt-1">Production-ready AI agents, full-stack ML apps, and predictive models</p>
       </div>
 
-
-      <div class="card">
-
-        <h3>Other Technologies</h3>
-
-        <div class="skills">
-
-          <span>MATLAB</span>
-          <span>DBMS</span>
-          <span>Data Structures</span>
-
+      <!-- LANGGRAPH PROJECTS -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <span class="px-3 py-1 rounded-lg bg-indigo-600 text-white text-xs font-bold uppercase tracking-wider">LangGraph</span>
+          <h3 class="text-xl font-bold text-slate-800">Multi-Agent &amp; Stateful Workflow Systems</h3>
         </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between border-t-4 border-t-indigo-500">
+            <div>
+              <h4 class="text-lg font-bold text-slate-900 mb-2">AI Used-Car Price &amp; Purchase Advisor</h4>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">ML Regression</span>
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-indigo-50 text-indigo-700">LangGraph</span>
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-cyan-50 text-cyan-700">FastAPI</span>
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Groq LLM</span>
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">SQLite</span>
+              </div>
+              <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside mb-6">
+                <li>Combines ML price regression with Generative AI and live DuckDuckGo web research.</li>
+                <li>Evaluates brand, age, mileage, engine, fuel, transmission, ownership, and location.</li>
+                <li>Delivers structured <strong class="text-slate-800">BUY / CONSIDER / AVOID</strong> purchase recommendations via Streamlit &amp; FastAPI.</li>
+              </ul>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <a href="https://oldcaranalyzer.streamlit.app/" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white transition">
+                🚗 Live Demo
+              </a>
+              <a href="https://github.com/riju53/old_car_analyzer/tree/main" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-900 text-white transition">
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between border-t-4 border-t-rose-500">
+            <div>
+              <h4 class="text-lg font-bold text-slate-900 mb-2">Cardiovascular Disease Prediction &amp; AI Medical Assistant</h4>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-rose-50 text-rose-700">ML Classification</span>
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-indigo-50 text-indigo-700">LangGraph</span>
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-cyan-50 text-cyan-700">FastAPI</span>
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Groq LLM</span>
+              </div>
+              <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside mb-6">
+                <li>End-to-end ML classification predicting cardiovascular risk from patient health metrics.</li>
+                <li>LangGraph orchestrates prediction, BMI computation, and DuckDuckGo medical retrieval.</li>
+                <li>Includes clinical safety guardrails distinguishing model estimates from medical diagnoses.</li>
+              </ul>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <a href="https://cardiovascular1app.streamlit.app/" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-rose-600 hover:bg-rose-700 text-white transition">
+                🩺 Live Demo
+              </a>
+              <a href="https://github.com/riju53/cardiovascularapp" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-900 text-white transition">
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between border-t-4 border-t-cyan-500">
+            <div>
+              <h4 class="text-lg font-bold text-slate-900 mb-2">AI Multi-Agent Travel Planner</h4>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-indigo-50 text-indigo-700">LangGraph</span>
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-cyan-50 text-cyan-700">AviationStack API</span>
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-amber-50 text-amber-700">Tavily Search</span>
+              </div>
+              <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside mb-6">
+                <li>Multi-agent orchestration generating complete, day-by-day end-to-end travel itineraries.</li>
+                <li>Integrates AviationStack API for live flight schedules and Tavily Search for hotel &amp; local recommendations.</li>
+              </ul>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <a href="https://travelagenttathagata.streamlit.app/" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 text-white transition">
+                🌍 Live Demo
+              </a>
+              <a href="https://github.com/riju53/Travel_Agent_Tathagata" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-900 text-white transition">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
-    </div>
+      <!-- LANGCHAIN PROJECTS -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <span class="px-3 py-1 rounded-lg bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider">LangChain</span>
+          <h3 class="text-xl font-bold text-slate-800">Tool-Calling Agents &amp; LLM Applications</h3>
+        </div>
 
-  </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- LangChain 1 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between border-t-4 border-t-emerald-500">
+            <div>
+              <h4 class="text-lg font-bold text-slate-900 mb-2">AI-Powered Live Web Search Assistant</h4>
+              <p class="text-sm text-slate-600 mb-3">
+                Real-time AI Q&amp;A system using <strong class="text-slate-800">Groq LLM, LangChain, and DuckDuckGo Search</strong> to retrieve and synthesize up-to-date web information inside an interactive Streamlit interface.
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <a href="https://ask-from-tathagata.streamlit.app/" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition">
+                🚀 Live Demo
+              </a>
+              <a href="https://github.com/riju53/Ask-from-Tathagata" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-900 text-white transition">
+                GitHub
+              </a>
+            </div>
+          </div>
 
-</section>
+          <!-- LangChain 2 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between border-t-4 border-t-teal-500">
+            <div>
+              <h4 class="text-lg font-bold text-slate-900 mb-2">LLM-Powered Multi-Agent Stock &amp; Mutual Fund Analysis</h4>
+              <p class="text-sm text-slate-600 mb-3">
+                Financial market research assistant powered by <strong class="text-slate-800">LangChain, Groq LLM, and financial APIs</strong> to analyze Indian stocks, US equities, and mutual funds with structured insights.
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <a href="https://stockadvisior.streamlit.app" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-teal-600 hover:bg-teal-700 text-white transition">
+                📊 Live App
+              </a>
+              <a href="https://github.com/tathagatanath01" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-900 text-white transition">
+                GitHub
+              </a>
+            </div>
+          </div>
 
+          <!-- LangChain 3 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between border-t-4 border-t-sky-500">
+            <div>
+              <h4 class="text-lg font-bold text-slate-900 mb-2">AI City Information &amp; Weather Assistant</h4>
+              <p class="text-sm text-slate-600 mb-3">
+                Agentic assistant built with <strong class="text-slate-800">LangChain, Qwen3-32B, WeatherAPI, and SQLite checkpointing</strong> for persistent conversational memory and live city intelligence.
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <a href="https://weatherandlocation.streamlit.app/" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-sky-600 hover:bg-sky-700 text-white transition">
+                🌤️ Live App
+              </a>
+              <a href="https://github.com/riju53/Weather_and_Location_report/blob/main/app.py" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-900 text-white transition">
+                GitHub
+              </a>
+            </div>
+          </div>
 
-<!-- ================= PROJECTS ================= -->
-
-<section class="section" id="projects">
-
-  <div class="container">
-
-    <h2>Projects</h2>
-
-
-    <!-- LANGGRAPH -->
-
-    <h3 class="project-category">
-      LangGraph Projects
-    </h3>
-
-    <div class="grid">
-
-
-      <div class="card">
-
-        <h3>
-          AI Used-Car Price & Purchase Advisor
-        </h3>
-
-        <p><b>Technologies: ML Regression, FastAPI, Streamlit, LangGraph, Groq LLM, DuckDuckGo Search, SQLite. Data Cleaning.</b></p>
-
-        <p>
-          AI-powered used-car price and purchase recommendation system
-          combining Machine Learning regression with Generative AI and
-          web research.
-        </p>
-
-        <p>
-          Built a regression pipeline using vehicle attributes such as
-          brand, age, mileage, engine capacity, fuel type, transmission,
-          ownership history, and location.
-        </p>
-
-        <p>
-          Integrated FastAPI, LangGraph, Groq LLM and DuckDuckGo Search
-          for price prediction, web research and AI-driven BUY /
-          CONSIDER / AVOID recommendations.
-        </p>
-
-        <a class="btn-small"
-           href="https://oldcaranalyzer.streamlit.app/"
-           target="_blank">
-          🚗 Live Demo
-        </a>
-
-        <a class="btn-small"
-           href="https://github.com/riju53/old_car_analyzer/tree/main"
-           target="_blank">
-          GitHub
-        </a>
-
+          <!-- LangChain 4 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between border-t-4 border-t-purple-500">
+            <div>
+              <h4 class="text-lg font-bold text-slate-900 mb-2">AI Resume Analyzer (ATS Screening)</h4>
+              <p class="text-sm text-slate-600 mb-3">
+                PDF resume parser using <strong class="text-slate-800">LangChain, Groq LLM, PyPDF, and Structured JSON output</strong> to identify skill gaps and generate recruiter-grade evaluations with minimal hallucination.
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <a href="https://resumeanalyserpdf.streamlit.app/" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-purple-600 hover:bg-purple-700 text-white transition">
+                📄 Live Demo
+              </a>
+              <a href="https://github.com/riju53" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-900 text-white transition">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
+      <!-- DEEP LEARNING & MACHINE LEARNING -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <span class="px-3 py-1 rounded-lg bg-amber-500 text-white text-xs font-bold uppercase tracking-wider">DL &amp; ML</span>
+          <h3 class="text-xl font-bold text-slate-800">Deep Learning &amp; Predictive Modeling</h3>
+        </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-amber-600 uppercase">CNN / Computer Vision</span>
+              <h4 class="text-lg font-bold text-slate-900 mt-1 mb-2">Diabetes Prediction using CNN</h4>
+              <p class="text-sm text-slate-600 mb-4">Convolutional Neural Network model trained for retinal image detection related to diabetic retinopathy screening.</p>
+            </div>
+            <a href="https://github.com/tathagatanath01/datascience/blob/master/deeplearning_diabetecs_ratina_image.py" target="_blank" rel="noopener noreferrer"
+              class="inline-block text-center text-xs font-semibold py-2 px-4 rounded-lg bg-slate-800 hover:bg-slate-900 text-white transition">
+              GitHub Repository
+            </a>
+          </div>
 
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-indigo-600 uppercase">ML Regression</span>
+              <h4 class="text-lg font-bold text-slate-900 mt-1 mb-2">Bengaluru House Price Prediction</h4>
+              <p class="text-sm text-slate-600 mb-4">End-to-end regression pipeline deployed as a live web app to estimate residential property prices across Bengaluru.</p>
+            </div>
+            <a href="https://house-predictor-zldn.onrender.com" target="_blank" rel="noopener noreferrer"
+              class="inline-block text-center text-xs font-semibold py-2 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white transition">
+              🏠 Live Demo
+            </a>
+          </div>
 
-      <div class="card">
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-rose-600 uppercase">ML Classification</span>
+              <h4 class="text-lg font-bold text-slate-900 mt-1 mb-2">Breast Cancer Prediction</h4>
+              <p class="text-sm text-slate-600 mb-4">Supervised machine learning classification workflow in Python for early diagnostic malignancy prediction.</p>
+            </div>
+            <a href="https://github.com/tathagatanath01/datascience/tree/master/Breast_Cancer" target="_blank" rel="noopener noreferrer"
+              class="inline-block text-center text-xs font-semibold py-2 px-4 rounded-lg bg-slate-800 hover:bg-slate-900 text-white transition">
+              GitHub Repository
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <h3>
-          Cardiovascular Disease Prediction & AI Medical Research Assistant,
-        </h3>
+    <!-- ================= EXPERIENCE & EDUCATION ================= -->
+    <section id="experience" class="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <!-- Education -->
+      <div>
+        <h2 class="text-2xl font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+          <span>🎓</span> Education
+        </h2>
+        <div class="space-y-4">
+          <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 border-l-4 border-l-indigo-600">
+            <div class="flex justify-between items-start gap-2">
+              <h3 class="font-bold text-slate-900">M.Tech, Computer Science &amp; Engineering</h3>
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 shrink-0">2019</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">Aliah University, Kolkata, West Bengal</p>
+            <p class="text-sm font-semibold text-indigo-600 mt-1">CGPA: 8.63</p>
+          </div>
 
-        <p>
-         <b>Technologies: ML classification, FastAPI, Streamlit, LangGraph, Groq LLM, DuckDuckGo Search, SQLite. Data Cleaning.</b>
-        </p>
+          <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 border-l-4 border-l-cyan-500">
+            <div class="flex justify-between items-start gap-2">
+              <h3 class="font-bold text-slate-900">5-Year Integrated M.Sc, Computer Science</h3>
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-cyan-50 text-cyan-700 shrink-0">2016</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">Aliah University, Kolkata, West Bengal</p>
+            <p class="text-sm font-semibold text-cyan-700 mt-1">CGPA: 7.67</p>
+          </div>
 
-        <p>
-          Developed an end-to-end machine learning application to predict categories of cardiovascular disease using structured patient health data.
-
-        </p>
-
-        <p>
-         Built a LangGraph workflow to orchestrate prediction, BMI calculation, medical information retrieval, and AI-generated health information.
-        </p>
-        <p>
-          Integrated a Groq-hosted large language model and DuckDuckGo search to retrieve relevant medical information and support evidence-aware responses.
-        </p>
-        <p>
-          Designed the application to distinguish model predictions from clinical diagnoses and medically validated risk assessments.
-        </p>
-
-        <a class="btn-small"
-           href="https://cardiovascular1app.streamlit.app/"
-           target="_blank">
-          🚗 Live Demo
-        </a>
-
-        <a class="btn-small"
-           href="https://github.com/riju53/cardiovascularapp"
-           target="_blank">
-          GitHub
-        </a>
-
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/80">
+              <span class="text-xs font-bold text-slate-400">2010 &bull; WBCHSE</span>
+              <h4 class="font-bold text-slate-900 text-sm mt-0.5">Higher Secondary</h4>
+              <p class="text-xs text-slate-600">Manbazar R.M.I</p>
+              <p class="text-xs font-semibold text-slate-800 mt-1">Percentage: 60%</p>
+            </div>
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/80">
+              <span class="text-xs font-bold text-slate-400">2007 &bull; WBBSE</span>
+              <h4 class="font-bold text-slate-900 text-sm mt-0.5">Secondary</h4>
+              <p class="text-xs text-slate-600">Manbazar R.M.I</p>
+              <p class="text-xs font-semibold text-slate-800 mt-1">Percentage: 74.63%</p>
+            </div>
+          </div>
+        </div>
       </div>
 
+      <!-- Internship & Academic Projects -->
+      <div class="space-y-8">
+        <div>
+          <h2 class="text-2xl font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+            <span>💼</span> Internship Experience
+          </h2>
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 border-l-4 border-l-emerald-500">
+            <div class="flex flex-wrap justify-between items-center gap-2 mb-1">
+              <h3 class="font-bold text-lg text-slate-900">Website Designer</h3>
+              <span class="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">June 2016 – Nov 2017</span>
+            </div>
+            <p class="text-sm font-semibold text-slate-700 mb-2">Creazione Production, Kolkata</p>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Designed, developed, and maintained responsive organizational websites and digital assets using WordPress.
+            </p>
+          </div>
+        </div>
 
-      <div class="card">
+        <div>
+          <h2 class="text-2xl font-extrabold text-slate-900 mb-4 flex items-center gap-2">
+            <span>🔬</span> Academic Research Projects
+          </h2>
+          <div class="space-y-4">
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80">
+              <h3 class="font-bold text-slate-900">Wireless Sensor Network for Rhino Protection</h3>
+              <p class="text-sm text-slate-600 mt-1">M.Tech thesis applying WSN algorithms to anti-poaching wildlife monitoring in Kaziranga National Park (<strong class="text-slate-800">MATLAB</strong>).</p>
+              <a href="https://rhinoresourcecenter.com/wp-content/uploads/2019/10/1571471496.pdf" target="_blank" rel="noopener noreferrer"
+                class="inline-block mt-3 text-xs font-semibold text-indigo-600 hover:text-indigo-800">
+                📄 View Research Paper &rarr;
+              </a>
+            </div>
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80">
+              <h3 class="font-bold text-slate-900">Urdu Offline Signature Identification</h3>
+              <p class="text-sm text-slate-600 mt-1">M.Sc research project focusing on pattern recognition and feature extraction for offline signature verification (<strong class="text-slate-800">MATLAB</strong>).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <h3>
-          AI Multi-Agent Travel Planner
-        </h3>
-
-        <p>
-          AI-powered travel planning system using LangGraph and LLM
-          orchestration to generate end-to-end travel itineraries.
+    <!-- ================= RESEARCH, ACHIEVEMENTS & EXTRA-CURRICULAR ================= -->
+    <section id="research" class="scroll-mt-20 space-y-10">
+      <!-- Publication Highlight Banner -->
+      <div class="bg-gradient-to-r from-indigo-900 via-slate-900 to-indigo-950 rounded-2xl p-6 sm:p-8 text-white shadow-lg">
+        <span class="inline-block text-xs font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-400/30 px-3 py-1 rounded-full mb-3">
+          Peer-Reviewed Elsevier Publication &bull; SCI Impact Factor: 3.1
+        </span>
+        <h2 class="text-xl sm:text-2xl font-bold mb-2">
+          Application of Wireless Sensor Networks for Rhino Protection Against Poachers in Kaziranga National Park
+        </h2>
+        <p class="text-slate-300 text-sm mb-1">
+          <strong>Authors:</strong> Tathagata Nath, Md Azharuddin
         </p>
-
-        <p>
-          Integrated AviationStack API for flight data and Tavily
-          Search for hotel recommendations and contextual travel
-          suggestions.
+        <p class="text-slate-400 text-sm mb-5">
+          AEU – International Journal of Electronics and Communications (Elsevier), Volume 111, 2019.
         </p>
-
-        <a class="btn-small"
-           href="https://travelagenttathagata.streamlit.app/"
-           target="_blank">
-          🌍 Live Demo
+        <a href="https://rhinoresourcecenter.com/wp-content/uploads/2019/10/1571471496.pdf" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm transition">
+          📄 Read Published Paper
         </a>
-
-        <a class="btn-small"
-           href="https://github.com/riju53/Travel_Agent_Tathagata"
-           target="_blank">
-          GitHub
-        </a>
-
       </div>
 
-    </div>
-    <p> </p>
+      <!-- Achievements & Extra-Curricular Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-3">🏆</div>
+          <h3 class="font-bold text-slate-900">Best Startup Idea</h3>
+          <p class="text-xs font-semibold text-amber-700 mt-0.5 mb-2">Automatic Postal Kiosk</p>
+          <p class="text-sm text-slate-600 mb-4">Awarded at the International Conference on Frontiers in Computing and Systems (Springer).</p>
+          <a href="best_idea.jpg" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-indigo-600 hover:underline">
+            View Certificate &rarr;
+          </a>
+        </div>
 
-    <!-- LANGCHAIN -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80">
+          <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl mb-3">📚</div>
+          <h3 class="font-bold text-slate-900">Scientific Journal Reviewer</h3>
+          <p class="text-xs font-semibold text-indigo-700 mt-0.5 mb-2">Scopus Indexed Journal</p>
+          <p class="text-sm text-slate-600 mb-4">Served as a peer reviewer for the International Journal of Electrical and Computing Engineering.</p>
+          <a href="reviewer.jpg" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-indigo-600 hover:underline">
+            View Certificate &rarr;
+          </a>
+        </div>
 
-    <h3 class="project-category">
-      LangChain Projects
-    </h3>
-
-    <div class="grid">
-
-
-      <div class="card">
-
-        <h3>
-          AI-Powered Live Web Search Assistant
-        </h3>
-
-        <p>
-          Real-time AI question answering system using Groq LLM,
-          LangChain and DuckDuckGo Search to retrieve and process
-          up-to-date web information.
-        </p>
-
-        <p>
-          Developed an interactive Streamlit application enabling
-          users to ask open-domain questions and receive concise,
-          context-aware answers.
-        </p>
-
-        <a class="btn-small"
-           href="https://ask-from-tathagata.streamlit.app/"
-           target="_blank">
-          🚀 Live Demo
-        </a>
-
-        <a class="btn-small"
-           href="https://github.com/riju53/Ask-from-Tathagata"
-           target="_blank">
-          GitHub
-        </a>
-
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80">
+          <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-xl mb-3">✍️</div>
+          <h3 class="font-bold text-slate-900">Bengali Story Writer</h3>
+          <p class="text-xs font-semibold text-pink-700 mt-0.5 mb-2">Creative Writing</p>
+          <p class="text-sm text-slate-600 mb-4">Authoring original Bengali short stories and creative fiction published online for readers.</p>
+          <a href="https://bengali.pratilipi.com/user/%E0%A6%8B%E0%A6%9C%E0%A7%81-%E0%A6%A4%E0%A6%A5%E0%A6%BE%E0%A6%97%E0%A6%A4-%E0%A6%A8%E0%A6%BE%E0%A6%A5-c2n9130692" target="_blank" rel="noopener noreferrer"
+            class="text-xs font-semibold text-pink-600 hover:underline">
+            📖 Read My Stories &rarr;
+          </a>
+        </div>
       </div>
-
-
-      <div class="card">
-
-        <h3>
-          LLM-Powered Multi-Agent Stock & Mutual Fund Analysis
-        </h3>
-
-        <p>
-          AI-powered financial market analysis system using LangChain
-          and Groq LLM to analyze Indian stocks, US stocks and mutual
-          funds.
-        </p>
-
-        <p>
-          Integrated financial APIs and tool-based agent orchestration
-          to generate structured market insights.
-        </p>
-
-        <a class="btn-small"
-           href="https://stockadvisior.streamlit.app"
-           target="_blank">
-          📊 Live App
-        </a>
-
-        <a class="btn-small"
-           href="https://github.com/tathagatanath01"
-           target="_blank">
-          GitHub
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <h3>
-          AI City Information & Weather Assistant
-        </h3>
-
-        <p>
-          Agentic AI Weather and City Information Assistant using
-          LangChain and Qwen3-32B.
-        </p>
-
-        <p>
-          Integrated WeatherAPI, DuckDuckGo Search and SQLite
-          checkpointing for live data retrieval and persistent
-          agent state.
-        </p>
-
-        <p>
-          Developed and deployed an interactive Streamlit application
-          with secure API-key management.
-        </p>
-
-        <a class="btn-small"
-           href="https://weatherandlocation.streamlit.app/"
-           target="_blank">
-          🌤️ Live App
-        </a>
-
-        <a class="btn-small"
-           href="https://github.com/riju53/Weather_and_Location_report/blob/main/app.py"
-           target="_blank">
-          GitHub
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <h3>
-          AI Resume Analyzer
-        </h3>
-
-        <p>
-          LLM-powered ATS Resume Screening system using Python,
-          LangChain, Groq LLM, Streamlit and PyPDF.
-        </p>
-
-        <p>
-          Analyzes PDF resumes and generates structured insights
-          including skills, education, experience, projects, skill
-          gaps and recruiter recommendations.
-        </p>
-
-        <p>
-          Implemented structured JSON generation and prompt
-          engineering to improve consistency and reduce hallucination.
-        </p>
-
-        <a class="btn-small"
-           href="https://resumeanalyserpdf.streamlit.app/"
-           target="_blank">
-          📄 Live Demo
-        </a>
-
-        <a class="btn-small"
-           href="https://github.com/riju53/Weather_and_Location_report/blob/main/app.py"
-           target="_blank">
-          GitHub
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- DEEP LEARNING -->
-
-    <h3 class="project-category">
-      Deep Learning Projects
-    </h3>
-
-    <div class="grid">
-
-      <div class="card">
-
-        <h3>
-          Diabetes Prediction using CNN
-        </h3>
-
-        <p>
-          Deep learning project using Convolutional Neural Networks
-          for retinal image detection related to diabetes prediction.
-        </p>
-
-        <a class="btn-small"
-           href="https://github.com/tathagatanath01/datascience/blob/master/deeplearning_diabetecs_ratina_image.py"
-           target="_blank">
-          GitHub
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- MACHINE LEARNING -->
-
-    <h3 class="project-category">
-      Machine Learning Projects
-    </h3>
-
-    <div class="grid">
-
-
-      <div class="card">
-
-        <h3>
-          Bengaluru House Price Prediction
-        </h3>
-
-        <p>
-          Machine Learning regression model for Bengaluru house
-          price prediction.
-        </p>
-
-        <a class="btn-small"
-           href="https://house-predictor-zldn.onrender.com"
-           target="_blank">
-          🏠 Live Demo
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <h3>
-          Breast Cancer Prediction
-        </h3>
-
-        <p>
-          Machine Learning classification project for breast cancer
-          prediction using Python.
-        </p>
-
-        <a class="btn-small"
-           href="https://github.com/tathagatanath01/datascience/tree/master/Breast_Cancer"
-           target="_blank">
-          GitHub
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= INTERNSHIP ================= -->
-
-<section class="section">
-
-  <div class="container">
-
-    <h2>Internship Experience</h2>
-
-    <div class="card">
-
-      <h3>Website Designer</h3>
-
-      <p>
-        <strong>Creazione Production, Kolkata</strong>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 text-center text-sm">
+      <p class="font-medium text-slate-300">
+        © 2026 Tathagata Nath &bull; AI &amp; Agentic AI Engineer | Machine Learning | Deep Learning
       </p>
-
-      <p>
-        June 2016 – November 2017
-      </p>
-
-      <p>
-        Worked on website design and related web-development
-        activities for the organization using WordPress.
-      </p>
-
     </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= ACADEMIC PROJECTS ================= -->
-
-<section class="section">
-
-  <div class="container">
-
-    <h2>Academic Projects</h2>
-
-    <div class="grid">
-
-
-      <div class="card">
-
-        <h3>
-          Wireless Sensor Network for Rhino Protection
-        </h3>
-
-        <p>
-          M.Tech research project on applying wireless sensor
-          networks for rhino monitoring against poaching in
-          Kaziranga National Park.
-        </p>
-
-        <p>
-          <strong>Technology:</strong> MATLAB
-        </p>
-
-        <a class="btn-small"
-           href="https://rhinoresourcecenter.com/wp-content/uploads/2019/10/1571471496.pdf"
-           target="_blank">
-          📄 Research Paper
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <h3>
-          Urdu Offline Signature Identification
-        </h3>
-
-        <p>
-          M.Sc research project on offline Urdu signature
-          identification.
-        </p>
-
-        <p>
-          <strong>Technology:</strong> MATLAB
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= RESEARCH ================= -->
-
-<section class="section">
-
-  <div class="container">
-
-    <h2>Research & Publications</h2>
-
-    <div class="card">
-
-      <h3>
-        Application of Wireless Sensor Networks for Rhino Protection
-        Against Poachers in Kaziranga National Park
-      </h3>
-
-      <p>
-        <strong>
-          Tathagata Nath, Md Azharuddin
-        </strong>
-      </p>
-
-      <p>
-        AEU – International Journal of Electronics and Communications
-        (Elsevier), Volume 111, 2019.
-      </p>
-
-      <p>
-        SCI Journal | Impact Factor: 3.1
-      </p>
-
-      <a class="btn-small"
-         href="https://rhinoresourcecenter.com/wp-content/uploads/2019/10/1571471496.pdf"
-         target="_blank">
-        📄 Research Paper
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= ACHIEVEMENTS ================= -->
-
-<section class="section">
-
-  <div class="container">
-
-    <h2>Achievements & Professional Activities</h2>
-
-    <div class="grid">
-
-
-      <div class="card">
-
-        <h3>
-          🏆 Best Startup Idea
-        </h3>
-
-        <p>
-          <strong>Automatic Postal Kiosk</strong>
-        </p>
-
-        <p>
-          Best Startup Idea presented at the International Conference
-          on Frontiers in Computing and Systems, Springer.
-        </p>
-
-        <a class="btn-small"
-           href="best_idea.jpg"
-           target="_blank">
-          Certificate
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <h3>
-          📚 Scientific Journal Reviewer
-        </h3>
-
-        <p>
-          Contributed as a reviewer for the
-          <strong>
-            International Journal of Electrical and Computing Engineering
-          </strong>
-          (Scopus).
-        </p>
-
-        <a class="btn-small"
-           href="reviewer.jpg"
-           target="_blank">
-          Certificate
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= CORE SUBJECTS ================= -->
-
-<section class="section">
-
-  <div class="container">
-
-    <h2>Core Academic Subjects</h2>
-
-    <div class="skills">
-
-      <span>Data Structures</span>
-
-      <span>Database Management Systems</span>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= EXTRA CURRICULAR ================= -->
-
-<section class="section">
-
-  <div class="container">
-
-    <h2>Extra-Curricular Activities</h2>
-
-    <div class="card">
-
-      <h3>✍️ Bengali Story Writer</h3>
-
-      <p>
-        I write Bengali stories as a creative activity.
-      </p>
-
-      <a class="btn-small"
-         href="https://bengali.pratilipi.com/user/%E0%A6%8B%E0%A6%9C%E0%A7%81-%E0%A6%A4%E0%A6%A5%E0%A6%BE%E0%A6%97%E0%A6%A4-%E0%A6%A8%E0%A6%BE%E0%A6%A5-c2n9130692"
-         target="_blank">
-        📖 Read My Stories
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= CAREER STATUS ================= -->
-
-<section class="section">
-
-  <div class="container">
-
-    <div class="card">
-
-      <h2>Career Objective</h2>
-
-      <p>
-        Returning to the professional workforce and seeking
-        opportunities to apply and further develop my skills in
-        Artificial Intelligence, Machine Learning, Deep Learning,
-        Agentic AI and Data Science.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-  <p>
-    © 2026 Tathagata Nath | AI / Agentic AI | Machine Learning
-  </p>
-
-</footer>
-
+  </footer>
 
 </body>
-
 </html>
